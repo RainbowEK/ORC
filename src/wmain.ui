@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>wMain</class>
+ <widget class="QMainWindow" name="wMain">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>410</width>
+    <height>627</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>OBS Remote Control</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QPushButton" name="btnStream">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>stream off</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnRecord">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>20</y>
+      <width>171</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>record off</string>
+    </property>
+    <property name="checkable">
+     <bool>true</bool>
+    </property>
+    <property name="checked">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstProfiles">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>220</y>
+      <width>191</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstScenes">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>191</width>
+      <height>101</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="lstSources">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>220</y>
+      <width>191</width>
+      <height>231</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>191</width>
+      <height>166</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 3px;
+border-color: rgb(173, 173, 173);
+border-style: ridge;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>10</y>
+      <width>191</width>
+      <height>121</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 3px;
+border-color: rgb(173, 173, 173);
+border-style: ridge;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="txtLog">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>480</y>
+      <width>391</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="cursor" stdset="0">
+     <cursorShape>IBeamCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(234, 234, 234);
+</string>
+    </property>
+    <property name="inputMethodHints">
+     <set>Qt::ImhMultiLine</set>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Plain</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDrops_2">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>200</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Profiles:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDrops_3">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>200</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Sources:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDrops_4">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>330</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Scenes:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDrops_5">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>460</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Log:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblIPhost">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>145</y>
+      <width>151</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>IP host:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>135</y>
+      <width>191</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border: 3px;
+border-color: rgb(173, 173, 173);
+border-style: ridge;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblPulse">
+    <property name="geometry">
+     <rect>
+      <x>371</x>
+      <y>145</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Arial Black</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>♥</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>26</x>
+      <y>65</y>
+      <width>166</width>
+      <height>106</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QLabel" name="lblKbps">
+       <property name="text">
+        <string>kbps:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblFps">
+       <property name="text">
+        <string>fps:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblDrops">
+       <property name="text">
+        <string>drops:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblFrames">
+       <property name="text">
+        <string>frames:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblBytesStream">
+       <property name="text">
+        <string>Mbytes:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblTimeStream">
+       <property name="text">
+        <string>time:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="">
+    <property name="geometry">
+     <rect>
+      <x>226</x>
+      <y>70</y>
+      <width>166</width>
+      <height>53</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <widget class="QLabel" name="lblFramesRecord">
+       <property name="text">
+        <string>frames:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblBytesRecord">
+       <property name="text">
+        <string>Mbytes:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="lblTimeRecord">
+       <property name="text">
+        <string>time:</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <zorder>label_3</zorder>
+   <zorder>label_2</zorder>
+   <zorder>label</zorder>
+   <zorder>btnStream</zorder>
+   <zorder>btnRecord</zorder>
+   <zorder>layoutWidget</zorder>
+   <zorder>lblDrops_2</zorder>
+   <zorder>lblDrops_3</zorder>
+   <zorder>lblDrops_4</zorder>
+   <zorder>lblDrops_5</zorder>
+   <zorder>lstProfiles</zorder>
+   <zorder>lstScenes</zorder>
+   <zorder>txtLog</zorder>
+   <zorder>lstSources</zorder>
+   <zorder>lblTimeRecord</zorder>
+   <zorder>lblIPhost</zorder>
+   <zorder>lblPulse</zorder>
+   <zorder>lblFramesRecord</zorder>
+   <zorder>lblBytesRecord</zorder>
+   <zorder>lblBytesStream</zorder>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

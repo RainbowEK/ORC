@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>hidden.png</file>
+        <file>obs-both.png</file>
+        <file>obs-idle.png</file>
+        <file>obs-record.png</file>
+        <file>obs-stream.png</file>
+        <file>visible.png</file>
+        <file>orc-logo.ico</file>
+    </qresource>
+</RCC>

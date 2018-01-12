@@ -1,0 +1,27 @@
+{
+	"auto-ip": "on",
+	"header": "OBS - Regenboog Kerk",
+	"lock-scenes": "ofn",
+	"lock-sources" : "ofn",
+	"match-scene" : "on",
+	"myexe": "obs64",
+	"myip": "127.0.0.1",
+	"myport": "4444",
+	"debug": "on",
+	"comment": "
+	===========================================================================================
+	INSTRUCTIONS:
+	1) OBS on the host PC must have websocket server addon installed, with no password used.
+	2) All following fields in JSON string must be present:
+		auto-ip: with value on or off. When off a form pops up and requests for the IP and Port. off not yet implemented.
+		header: with value can contain any string.
+		lock-scenes: with value on or off.
+		lock-sources: with value on or off.
+		match-scene: if profile starts with #1-, #hi-, #8- or equivalent, it will search if there is a scene containing such key , and if yes, then select the scene corresponding to this profile automaticly.
+		myexe: with value obs64. I have not yet analysed where this us esed for, so leave at obs64.
+		myip: the value must contain a valid IP address like 192.168.1.10 or 127.0.0.1.
+		myport: the values must be a port number like 4444, which is default.
+		debug: with value on or off. 
+		comment: holds this instruction section.
+	3) Have a nice day!"
+}
