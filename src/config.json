@@ -1,8 +1,8 @@
 {
 	"auto-ip": "on",
-	"header": "OBS - Regenboog Kerk",
-	"lock-scenes": "ofn",
-	"lock-sources" : "ofn",
+	"header": "ORC (OBS Remote Control) - RainbowEK",
+	"lock-scenes": "off",
+	"lock-sources" : "off",
 	"match-scene" : "on",
 	"myexe": "obs64",
 	"myip": "127.0.0.1",

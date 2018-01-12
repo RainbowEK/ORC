@@ -51,4 +51,4 @@ RESOURCES += \
 #    RC_FILE = orc.rc
 #}
 
-#RC_ICONS = orc-logo.ico
+RC_ICONS = ./src/orc-logo.ico

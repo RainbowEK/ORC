@@ -12,7 +12,6 @@
 #include <QTimer>
 #include <QMessageBox>
 #include <QPropertyAnimation>
-#include <QtWinExtras>
 
 #include "globals.h"
 
@@ -57,17 +56,8 @@ wMain::wMain(QWidget *parent) :
     if(ORC_LockSources) ui->lstSources->setEnabled(false);
     this->setWindowTitle(ORC_Header);
 
-    //QApplication::setWindowIcon(QIcon(":/orc-logo.ico"));
-//======================================
+    QApplication::setWindowIcon(QIcon(":/orc-logo.ico"));
 
-//    QWinTaskbarButton *button = new QWinTaskbarButton(widget);
-    QWinTaskbarButton *button = new QWinTaskbarButton(this);
-
-//    button->setWindow(widget->windowHandle());
-    button->setWindow(windowHandle());
-    button->setOverlayIcon(QIcon(":/obs-record.png"));
-
-//=======================================
     QTimer *IconTimer = new QTimer(this);
     connect(IconTimer, SIGNAL(timeout()), this, SLOT(onIconTime()));
     IconTimer->start(800);
@@ -456,11 +446,7 @@ void wMain::on_lstSources_itemDoubleClicked(QListWidgetItem *item) {
     }
 }
 
-void wMain::onIconTime() {
 
-}
-
-/*
 void wMain::onIconTime() {
     //Change state every pulse of the timer:
     ORC_IconChange = !ORC_IconChange;
@@ -477,27 +463,6 @@ void wMain::onIconTime() {
         QApplication::setWindowIcon(QIcon(":/obs-idle.png"));
     }
 }
-*/
-//http://doc.qt.io/qt-5/qtwinextras-overview.html
-
-/*
-void wMain::onIconTime() {
-    //Change state every pulse of the timer:
-    ORC_IconChange = !ORC_IconChange;
-
-    //Select the icon to be displayed:
-    if (ORC_IconChange) {
-        if (ORC_Record && ORC_Stream) {
-            QApplication::setWindowIcon(QIcon(":/obs-both.png"));
-        } else {
-            if (ORC_Record) QApplication::setWindowIcon(QIcon(":/obs-record.png"));
-            if (ORC_Stream) QApplication::setWindowIcon(QIcon(":/obs-stream.png"));
-        }
-    } else {
-        QApplication::setWindowIcon(QIcon(":/obs-idle.png"));
-    }
-}
-*/
 
 
 void logFile(QString *logData, QString logPath, QString logFirst, QString logExtCur, QString logExtBak, int logSize) {
