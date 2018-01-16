@@ -11,7 +11,7 @@ Just store the run directory at your own convenient location.
 Configuration settings are in the config.json file, including the description.
 Start ORC.exe (is a Windows 32bit app) and that's it.
 
-**Dependency:**
+**Dependancy:**
 Install "obs-websocket" plugin: https://obsproject.com/forum/threads/obs-websocket-remote-control-of-obs-studio-made-easy.58018/
 
 **Build/Compile:**
@@ -23,7 +23,7 @@ Therefor I used a .bat file (in which ORC_QT is started) and converted that to a
 **Screenshots:**
 See below... (located in ScreenShot folder)
 
-08-Jan-2018
+16-Jan-2018
 
 Fix included per 08-Jan-2018: The ORC.exe file was not executable on other PC's than my own. This had to do with license restriction.
 
