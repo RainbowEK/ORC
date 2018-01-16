@@ -1,6 +1,6 @@
 # ORC: OBS Remote Control (Qt Creator C++) 
 
-This program is a windows client for the OBS Studio "web-socket" plug-in.
+This program is a windows client for the OBS Studio "obs-websocket" plug-in.
 Is is written in C++, with Qt Creator (Qt5.9.2 - MinGW 32bit).
 
 **Disclaimer:**
@@ -10,6 +10,9 @@ Is is written in C++, with Qt Creator (Qt5.9.2 - MinGW 32bit).
 Just store the run directory at your own convenient location.
 Configuration settings are in the config.json file, including the description.
 Start ORC.exe (is a Windows 32bit app) and that's it.
+
+**Dependency:**
+Install "obs-websocket" plugin: https://obsproject.com/forum/threads/obs-websocket-remote-control-of-obs-studio-made-easy.58018/
 
 **Build/Compile:**
 Open the ORC.pro file with Qt Creator. Build from there. I used kit "Qt5.9.2 - MinGW 32bit"
